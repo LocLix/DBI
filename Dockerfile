@@ -11,5 +11,5 @@ WORKDIR ${EXEC_ROOT}
 COPY . .
 
 #EXPOSE 5080
-CMD "${EXEC_ROOT}/assets/scripts/start.sh"
+ENTRYPOINT "${EXEC_ROOT}/assets/scripts/start.sh"
 
