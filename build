@@ -1,0 +1,20 @@
+#!/usr/bin/env sh
+
+#cd assets/app
+#sudo composer update
+#cd ../..
+
+if [$1 == ""]
+then
+    echo ""
+    echo "Really stupid script to build this image tagging it as latest"
+    echo ""
+    echo "Usage: ./build <IMAGE-NAME|--help>"
+    echo ""
+    echo ""
+    echo "IMAGE-NAME    The name of the image your are building, retrieve it with 'docker image ls'"
+    echo ""
+    exit;
+fi
+
+docker build --no-cache --tag $1:latest .
